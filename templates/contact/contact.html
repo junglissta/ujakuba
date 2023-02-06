@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contact-form">
+    <h3>Napiste Nám</h3>
+<form action="" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="label">{{ field.label }}</div>
+    <div class="field">{{ field }}</div>
+    {% endfor %}
+    <button class="submit-button" type="submit" value="Register">Odoslať</button>
+</form>
+<a href="{% url 'home' %}">Home Page</a>
+</div>
+
+{% endblock %}

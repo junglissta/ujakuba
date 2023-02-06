@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="login-form">
+    <h3>Registracia</h3>
+<form action="" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="label">{{ field.label }}</div>
+      <div class="field">{{ field }}</div>
+      {% endfor %}
+    <button class="submit-button" type="submit" value="Register">Registracia</button>
+</form>
+<a href="{% url 'login' %}">Back to login</a>
+</div>
+
+{% endblock %}

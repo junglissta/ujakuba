@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+<p class="moving-text">Vitajte</p>
+{% if user.is_authenticated %}
+  <h1>Welcome, {{ user.username }}!</h1>
+{% else %}
+<h1>Welcome to My Bar</h1>
+{% endif %}
+<div class="grid">
+  <figure class="effect-milo">
+    <img src="https://images.unsplash.com/photo-1552590635-257736c7474a?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzUwOTc1MzU&ixlib=rb-4.0.3&q=80" alt="img11"/>
+    <figcaption>
+      <h2>Faithful <span>Milo</span></h2>
+      <p>viac druhov piva na vyber</p>
+    
+    </figcaption>			
+  </figure>
+  <figure class="effect-milo">
+    <img src="https://images.unsplash.com/photo-1565755713428-1bdfaa7db8ba?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzUwOTc1MzU&ixlib=rb-4.0.3&q=80" alt="img03"/>
+    <figcaption>
+      <h2>Faithful <span>Milo</span></h2>
+      <p>Prijemna atmosfera na posedenie</p>
+  
+    </figcaption>			
+  </figure>
+<figure class="effect-milo">
+    <img src="https://images.unsplash.com/photo-1566053936041-d607ea0578b5?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzUwOTc1MzU&ixlib=rb-4.0.3&q=80" alt="img03"/>
+    <figcaption>
+      <h2>Faithful <span>Milo</span></h2>
+      <p>Pridte sa k nam odreagovat</p>
+
+    </figcaption>			
+  </figure>
+<figure class="effect-milo">
+    <img src="https://images.unsplash.com/photo-1568644396922-5c3bfae12521?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzUwOTc1MzU&ixlib=rb-4.0.3&q=80" alt="img03"/>
+    <figcaption>
+      <h2>Faithful <span>Milo</span></h2>
+      <p>Na zdravie</p>
+    
+    </figcaption>			
+  </figure>
+</div>
+
+{% endblock %}
