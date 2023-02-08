@@ -8,6 +8,7 @@
       <div class="label">{{ field.label }}</div>
       <div class="field">{{ field }}</div>
       {% endfor %}
+      <p>Heslo musí obsahovať velke a malé písmeno, číslicu a nesmie byť podobne ako použivatelské meno</p>
     <button class="submit-button" type="submit" value="Register">Registracia</button>
 </form>
 <a href="{% url 'login' %}">Back to login</a>

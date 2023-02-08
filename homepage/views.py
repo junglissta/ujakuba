@@ -18,6 +18,6 @@ class SignUp(CreateView):
     template_name = 'registration/signup.html'
     success_url = 'login'
 
-class HomeView(LoginRequiredMixin, TemplateView):
+class HomeView(TemplateView):
     template_name = "index.html"
    
