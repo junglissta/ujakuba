@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Chat{% endblock %}
+
+{% block content %}
+
+<div class="chat-form">
+    
+    <form action="" method="post">
+      {% csrf_token %}
+      <!-- {{ form.as_p }} -->
+      {% for i in form %}
+      <p class="text-area">{{ i }}</p>
+      {% endfor %}
+      <button class="submit-button" type="submit">ODOSLAŤ</button>
+    </form>
+  </div>
+
+  {% for field in posts %}
+  <div class="upper-container">
+  <div class="post-container">
+    <div class="name-date">
+        <p class="user">{{ field.user }} </p>
+        <p class="date">, {{ field.date }}</p>
+      </div>
+      <p class="text">{{ field.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+    {{ p }}
+{% endblock %}
