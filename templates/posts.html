@@ -12,11 +12,11 @@
       {% for i in form %}
       <p class="text-area">{{ i }}</p>
       {% endfor %}
-      <button class="submit-button" type="submit">ODOSLAŤ</button>
+      <button class="submit-button" type="submit"><span class="material-icons arrow">trending_flat</span></button>
     </form>
   </div>
 
-  {% for field in posts %}
+  {% for field in object_list %}
   <div class="upper-container">
   <div class="post-container">
     <div class="name-date">
@@ -27,5 +27,38 @@
       </div>
     </div>
     {% endfor %}
-    {{ p }}
+    <nav>
+      {% if is_paginated %}
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{page_obj.previous_page_number}}"
+            >&laquo;</a
+          >
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+          <a class="page-link" href="#">&laquo;</a>
+        </li>
+        {% endif %} {% for i in paginator.page_range %} 
+        {% if page_obj.number == i %}
+        <li class="page-item"><a class="page-link active">{{ i }}</a></li>
+        {% else %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+        </li>
+        {% endif %} {% endfor %} {% if page_obj.has_next %}
+        <li class="page-item">
+          <a href="?page={{page_obj.next_page_number}}" class="page-link"
+            >&raquo;</a
+          >
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+          <a class="page-link">&raquo;</a>
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+    </nav>
 {% endblock %}

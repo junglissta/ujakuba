@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import logout
 from django.contrib.auth.forms import UserCreationForm
-from django.views.generic import TemplateView, ListView, View, FormView
+from django.views.generic import TemplateView, FormView, ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import PostForm
 from .models import Post
@@ -29,15 +29,16 @@ class HomeView(TemplateView):
 #     model = Post
 #     template_name = 'posts.html'
 
-class PostView(LoginRequiredMixin, FormView):
+class PostView(LoginRequiredMixin, ListView):
+    model = Post
     form_class = PostForm
     template_name = 'posts.html'
     success_url = 'posts'
+    queryset = Post.objects.all().order_by('date')
+    paginate_by = 5
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all().order_by('date')
-        p = Paginator(context, 15)
-        
+        context = super(PostView, self).get_context_data(**kwargs)
+        context['form'] = PostForm
         return context
 
     def post(self, request):
