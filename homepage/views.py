@@ -34,7 +34,7 @@ class PostView(LoginRequiredMixin, ListView):
     form_class = PostForm
     template_name = 'posts.html'
     success_url = 'posts'
-    queryset = Post.objects.all().order_by('date')
+    queryset = Post.objects.all().order_by('-date')
     paginate_by = 5
     def get_context_data(self, **kwargs):
         context = super(PostView, self).get_context_data(**kwargs)
