@@ -146,4 +146,4 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "korcmaujakuba@gmail.com"
-EMAIL_HOST_PASSWORD = "bukajkarcma2012"
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'some_random_default_string')
