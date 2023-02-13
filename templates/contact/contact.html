@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% block title %}Napište nám{% endblock %}
 {% block content %}
 <div class="login-form">
-    <h3>Napiste Nám</h3>
+    <h3>Napište Nám</h3>
 <form action="" method="post">
     {% csrf_token %}
     {% for field in form %}

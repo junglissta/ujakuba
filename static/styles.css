@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+80s+Fade&display=swap');
 * {
     max-width: 100%;
     margin: 0;
@@ -363,15 +363,15 @@ h2{
     
     transition: 0.5s;
 }
-.chat-form .submit-button .arrow {
+.chat-form .arrow {
     font-size: 40px;
     transition: 0.3s;
 }
-.chat-form .submit-button .arrow:hover {
+.chat-form .arrow:hover {
     transform: rotate(90deg);
 }
-.chat-form .submit-button .arrow:focus {
-    transform: rotate(360deg);
+.chat-form .arrow:focus {
+    transform: rotate(450deg);
 }
 .pagination {
     display: flex;
@@ -426,6 +426,15 @@ h2{
 }
 .post-container .text {
     color: white;
+}
+
+/* napojovy listok */
+
+.napojovy-listok {
+    margin: 100px auto;
+    width: 75%;
+    max-width: 950px;
+    height: 500px;
 }
 /* Common style */
 .grid figure {
@@ -552,6 +561,9 @@ figure.effect-milo:hover p {
   *{
     font-size: 4vw;
   }
+  .napojovy-listok {
+    width: 95%;
+  }
   .grid figure {
     width: 100%;
     float: none;
@@ -593,6 +605,7 @@ figure.effect-milo:hover p {
         
         z-index: 99;
         position: fixed;
+        display: inline-block;
         overflow: hidden;
         left: -100%;
         top: 50px;
@@ -601,7 +614,7 @@ figure.effect-milo:hover p {
         width: 100%;
         border-radius: 0px 0px 10px 10px;
         text-align: center;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
     }
@@ -611,9 +624,9 @@ figure.effect-milo:hover p {
     .navbar.active {
         opacity: 1;
     }
-
     .nav-menu.active {
         left: 0;
+        display: inline-block;
     
     }
   
@@ -623,6 +636,7 @@ figure.effect-milo:hover p {
     }
 
     .hamburger {
+        margin-right: 25px;
         display: block;
         cursor: pointer;
         color: rgb(227, 210, 61);
@@ -652,7 +666,6 @@ figure.effect-milo:hover p {
   }
   .top-left{
     display: none;
-    
     max-width: 95%;
     height: 350px;
     background: url(shots.jpg) no-repeat center / cover;

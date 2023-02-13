@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% block title %}Menu{% endblock %}
 {% block head %}
-
 {% endblock %}
 
 {% block content %}
 <p class="moving-text">Menu</p>
-<h1>Čo si u nás možte dať</h1>
-<p>Na výber je hneď z niekoľkých druhov piva, vína a veľa druhov destilátov. Menu je v procese vývoja...</p>
+<iframe class="napojovy-listok" src="{% static 'listok.pdf' %}" width="100%" height="500px">
+</iframe>
+<!-- <p class="menu"><img class="napojovy-listok" src="{% static 'listok.png' %}"></p> -->
 {% endblock %}
