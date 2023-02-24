@@ -3,6 +3,7 @@
 {% block title %}Prihlasenie{% endblock %}
 
 {% block content %}
+<div class="login-border">
   <div class="login-form">
     <h3>Prihlasenie</h2>
     <form method="post">
@@ -15,4 +16,5 @@
     </form>
     <div class="registracia">Nie ste člen?<a href="{% url 'signup' %}">Registracia</a></div>
   </div>
+</div>
 {% endblock %}

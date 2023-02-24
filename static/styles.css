@@ -7,12 +7,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 14px;
 }
 
 html {
     font-family: 'Sofia Sans', sans-serif;
-    background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,1) 64%, rgba(31,31,31,1) 100%, rgba(38,38,38,1) 100%);
+    background: rgb(34, 34, 34);
+    background: radial-gradient(circle, rgb(14, 13, 13) 64%, rgba(31,31,31,1) 100%, rgba(38,38,38,1) 100%);
     color: rgb(227, 210, 61);
 }
 body {
@@ -103,6 +104,8 @@ h1 {
 }
 
 .moving-text {
+    color: rgb(0, 0, 0);
+    font-weight: 900;
     position: fixed;
     font-family:  'Poiret One', cursive;
     font-weight: 500;
@@ -137,7 +140,7 @@ h1 {
 }
 .credentials {
     position: absolute;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     gap: 10px;
     right: 0;
     margin-right: 15px;
@@ -172,7 +175,7 @@ h1 {
 }
 
 .nav-link{
-    font-size: 1.5vw;
+    font-size: 1.5em;
     font-weight: 400;
     color: rgb(243, 224, 138);
     cursor: pointer;
@@ -200,7 +203,7 @@ h1 {
 .navbar .login {
     position: absolute;
     right: 50px;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     font-weight: 400;
     color: rgb(243, 224, 138);
     cursor: pointer;
@@ -219,7 +222,7 @@ h1 {
 }
 
 .footer-container {
-    font-size: 1.5vw;
+    font-size: 1.5em;
     height: 125px;
     padding-bottom: 25px;
     gap: 2vw;
@@ -260,13 +263,30 @@ h1 {
     flex-direction: column;
     flex-wrap: wrap;
     transform: translate(-55%, -55%);
-    background: rgb(50, 47, 47);
-    font-size: 1.5vw;
+    background: rgb(26, 26, 26);
+    font-size: 1.5em;
     max-width: 600px;
     padding: 30px;
     margin: 20px;
     color: rgb(243, 224, 138);
     z-index: 20;
+    border-radius: 1em;
+    box-sizing: border-box;
+    box-shadow: 14px 14px 20px #000000, -10px -10px 20px rgb(41, 41, 41);
+    animation: fadeInAnimation 2s linear;
+}
+
+.field input {
+    color: rgb(243, 224, 138);
+    border: none;
+    outline: none;
+    background: rgb(26, 26, 26);
+    padding: 10px;
+    padding-left: 20px;
+    height: 2em;
+    font-size: 1em;
+    border-radius: 10px;
+    box-shadow: inset 6px 6px 6px #000000, inset -6px -6px 6px rgb(41, 41, 41);
 }
 .login-form h2 {
     font-size: 40px;
@@ -318,7 +338,7 @@ h2{
 }
 
 .contact-form h3 {
-    font-size: 2vw;
+    font-size: 2em;
 }
 
 .grid {
@@ -341,12 +361,12 @@ h2{
     margin: auto;
     width: 80%;
     margin-top: 120px;
-    font-size: 1.5vw;
+    font-size: 1.5em;
 }
 .chat-form p input {
     margin: 5px;
     width: 100%;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     border-radius: 15px;
     padding: 10px;
 }
@@ -381,7 +401,7 @@ h2{
     
 }
 .pagination .page-link {
-    font-size: 1.5vw;
+    font-size: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;

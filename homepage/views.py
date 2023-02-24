@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import PostForm
 from .models import Post
 from django.core.paginator import Paginator
+from django.urls import reverse_lazy
 # Create your views here.
 
 def about(request):
@@ -19,7 +20,7 @@ def menu(request):
 class SignUp(CreateView):
     form_class = UserCreationForm
     template_name = 'registration/signup.html'
-    success_url = 'login'
+    success_url = reverse_lazy('login')
 
 class HomeView(TemplateView):
     template_name = "index.html"
