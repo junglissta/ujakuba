@@ -234,7 +234,7 @@ h1 {
 }
 .footer-container .material-icons {
     font-size: 40px;
-    color:rgb(227, 210, 61)
+    color: white;
 }
 .material-icons{
     transition: 0.4s;
@@ -263,7 +263,7 @@ h1 {
     flex-direction: column;
     flex-wrap: wrap;
     transform: translate(-55%, -55%);
-    background: rgb(26, 26, 26);
+    
     font-size: 1.5em;
     max-width: 600px;
     padding: 30px;
@@ -272,8 +272,18 @@ h1 {
     z-index: 20;
     border-radius: 1em;
     box-sizing: border-box;
-    box-shadow: 14px 14px 20px #000000, -10px -10px 20px rgb(41, 41, 41);
-    animation: fadeInAnimation 2s linear;
+    animation: fadeIn 1s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    0% {
+        background: rgb(14, 13, 13);
+    }
+    100%  {
+        background: rgb(19, 19, 19);
+        box-shadow: 14px 14px 20px #000000, -10px -10px 20px rgb(41, 41, 41);
+    }
 }
 
 .field input {
@@ -286,12 +296,22 @@ h1 {
     height: 2em;
     font-size: 1em;
     border-radius: 10px;
-    box-shadow: inset 6px 6px 6px #000000, inset -6px -6px 6px rgb(41, 41, 41);
+    animation: fadeInInput 1s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
-.login-form h2 {
+@keyframes fadeInInput {
+    0% {
+        background: rgb(14, 13, 13);
+    }
+    100% {
+        background: rgb(19, 19, 19);
+        box-shadow: inset 6px 6px 6px #000000, inset -6px -6px 6px rgb(41, 41, 41);
+    }
+}
+.login-form h3 {
     font-size: 40px;
-    font-weight: 500;
-    text-align: center;
+    margin: auto;
 }
 
 .login-form a {
@@ -312,24 +332,40 @@ h1 {
 h2{
     padding-top: 115px;
 }
-.login-form .submit-button {
-    margin: 10px auto;
+.submit-button {
+    margin: 20px auto;
     display: flex;
     justify-content: center;
-    background-color: rgb(207, 207, 192);
     padding: 5px 15px 5px 15px;
+    color:rgb(243, 224, 138);
     border-radius: 10px;
-    transition: 0.5s;
+    transition: 0.2s ease-in-out;
     border: none;
+    cursor: pointer;
+    animation: fadeInButton 1s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background: rgb(19, 19, 19);
+    box-shadow:  5px 5px 5px #000000, -5px -5px 5px rgb(41, 41, 41);
+
 }
-.login-form .submit-button:hover {
-    transform: translate(0,-2px);
-    background-color: #0e3636;
-    color: white;
+/* @keyframes fadeInButton {
+    0% {
+        background: rgb(14, 13, 13);
+    }
+    100%  {
+        background: rgb(19, 19, 19);
+        box-shadow:  5px 5px 5px #000000, -5px -5px 5px rgb(41, 41, 41);
+    }
+} */
+.submit-button:hover {
+    box-shadow:  2px 2px 2px #000000, -2px -2px 2px rgb(41, 41, 41);
+
 }
-.login-form .submit-button:focus {
-    transition: 0.1;
-    transform: translate(0, 3px);
+.submit-button:focus {
+
+    box-shadow: inset 2px 2px 2px #000000, inset -2px -2px 2px rgb(41, 41, 41);
+    
 }
 
 .contact-form {
