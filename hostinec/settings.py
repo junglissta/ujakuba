@@ -141,7 +141,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.joinpath('media/')
 
 DEFAULT_FROM_EMAIL = "kubodemko@gmail.com"
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 SERVER_EMAIL = 'korcmaujakuba@gmail.com'
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
