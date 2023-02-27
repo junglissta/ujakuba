@@ -643,7 +643,7 @@ figure.effect-milo:hover p {
 
 @media only screen and (max-width: 768px) {
   *{
-    font-size: 4vw;
+    font-size: 1em;
   }
   .napojovy-listok {
     width: 95%;
@@ -652,6 +652,13 @@ figure.effect-milo:hover p {
     width: 100%;
     float: none;
   }
+  .grid figure h2 {
+    font-size: 1em;
+}
+
+.grid figure h2 span {
+    font-size: 1em;
+}
   .login-form {
     max-width: 90%;
   }
