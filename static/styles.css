@@ -9,6 +9,9 @@
     box-sizing: border-box;
     font-size: 14px;
 }
+*:focus {
+    outline: none;
+}
 
 html {
     font-family: 'Sofia Sans', sans-serif;
@@ -300,6 +303,20 @@ h1 {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+.field textarea {
+    color: rgb(243, 224, 138);
+    border: none;
+    outline: none;
+    background: rgb(26, 26, 26);
+    padding: 10px;
+    padding-left: 20px;
+    height: 5em;
+    font-size: 1em;
+    border-radius: 10px;
+    animation: fadeInInput 1s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 @keyframes fadeInInput {
     0% {
         background: rgb(14, 13, 13);
@@ -387,76 +404,85 @@ h2{
 }
 
 /* posts */
-.new-post {
-    margin-top: 150px;
-}
-.new-post a {
-    color: white;
-}
-.chat-form {
+
+.input-and-button {
     margin: auto;
+    display: flex;
     width: 80%;
     margin-top: 120px;
-    font-size: 1.5em;
+    margin-bottom: 15px;
 }
-.chat-form p input {
-    margin: 5px;
+.input-and-button * {
     width: 100%;
+}
+input {
+    width: 100%;
+    color: rgb(243, 224, 138);
+    margin: auto;
+    padding: 7px;
+    border-radius: 15px 0 0 15px;
     font-size: 1.5em;
-    border-radius: 15px;
-    padding: 10px;
-}
-.chat-form .submit-button {
-    margin: 10px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-    border-radius: 30px;
-    background-color: #56b119;
+    height: 50px;
+    width: fit-content;
+    background: rgb(19, 19, 19);
+    box-shadow: inset 6px 6px 6px #000000, inset -6px -6px 6px rgb(41, 41, 41);
     
-    transition: 0.5s;
 }
-.chat-form .arrow {
-    font-size: 40px;
-    transition: 0.3s;
+.input-and-button .buttonik {
+    color: rgb(243, 224, 138);
+    width: 50px;
+    height: 50px;
+    border-radius: 0 15px 15px 0;
+    background-color: rgb(19, 19, 19);
+    box-shadow:  6px 6px 6px #000000, 1px -6px 6px rgb(41, 41, 41);
+    
+    transition: 0.2s;
 }
-.chat-form .arrow:hover {
-    transform: rotate(90deg);
+
+.input-and-button .buttonik:hover {
+    box-shadow:  2px 2px 2px #000000, -2px -2px 2px rgb(41, 41, 41);
+
 }
-.chat-form .arrow:focus {
-    transform: rotate(450deg);
+.input-and-button .buttonik:focus {
+
+    box-shadow: inset 2px 2px 2px #000000, inset -2px -2px 2px rgb(41, 41, 41);
 }
+
 .pagination {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     margin-bottom: 10px;
     
 }
 .pagination .page-link {
     font-size: 1.5em;
+    color: rgb(243, 224, 138);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40px;
     width: 40px;
-    background-color: #ded419;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: 0.2s;
+    background-color: rgb(19, 19, 19);
+    box-shadow:  4px 4px 4px #000000, -4px -4px 4px rgb(41, 41, 41);
 }
 .pagination a {
     color: black;
     font-weight: bold;
 } 
 .page-item .active {
-    background-color: #464848;
-    color: white;
+    box-shadow: inset 2px 2px 2px #000000, inset -2px -2px 2px rgb(41, 41, 41);
+
+}
+.pagination .page-link:focus {
+    box-shadow: inset 2px 2px 2px #000000, inset -2px -2px 2px rgb(41, 41, 41);
+
 }
 .pagination .page-link:hover {
-    transform: scale(1.3);
+    box-shadow:  2px 2px 2px #000000, -2px -2px 2px rgb(41, 41, 41);
+
 }
 #id-text{
     display: flex;
@@ -469,10 +495,10 @@ h2{
 }
 .post-container{
     margin: 10px auto;
-    background-color: #464848;
     margin-left: 10px;
     padding: 10px;
     border-radius: 15px;
+    background: rgb(52, 52, 52);
 }
 .post-container .name-date {
     display: flex;
@@ -502,7 +528,7 @@ h2{
 	max-width: 480px;
 	max-height: 360px;
 	width: 48%;
-	background: #3085a3;
+	background: #a6a23c;
 	text-align: center;
 	cursor: pointer;
 }
@@ -519,7 +545,7 @@ h2{
 	padding: 2em;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 1.25em;
+	font-size: 2em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -550,10 +576,12 @@ h2{
 .grid figure h2 {
 	word-spacing: -0.15em;
 	font-weight: 300;
+    font-size: 1em;
 }
 
 .grid figure h2 span {
 	font-weight: 800;
+    font-size: 1em;
 }
 
 .grid figure h2,
@@ -566,7 +594,7 @@ h2{
 	font-size: 68.5%;
 }
 figure.effect-milo {
-	background: #2e5d5a;
+	background: #8d9342;
 }
 
 figure.effect-milo img {
@@ -640,7 +668,7 @@ figure.effect-milo:hover p {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    margin-right: 13vw;
+    margin-right: 15vw;
     color: rgb(227, 210, 61);
     text-decoration: none;
   }
@@ -772,7 +800,7 @@ figure.effect-milo:hover p {
     
 }
   .submit-button {
-    margin: 10px;
+    margin: 10px auto;
     font-size: 5vw;
     font-weight: lighter;
     display: flex;

@@ -3,18 +3,16 @@
 
 
 {% block content %}
+  
+<form class="input-and-button" action="" method="post">
+    {% csrf_token %}
+    <!-- {{ form.as_p }} -->
+    {% for i in form %}
+    <p class="text-area">{{ i }}</p>
+    {% endfor %}
+    <button class="buttonik material-icons arrow" type="submit">trending_flat</button>
+</form>
 
-<div class="chat-form">
-    
-    <form action="" method="post">
-      {% csrf_token %}
-      <!-- {{ form.as_p }} -->
-      {% for i in form %}
-      <p class="text-area">{{ i }}</p>
-      {% endfor %}
-      <button class="submit-button material-icons arrow" type="submit">trending_flat</button>
-    </form>
-  </div>
 
   {% for field in object_list %}
   <div class="upper-container">

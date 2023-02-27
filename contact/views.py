@@ -12,10 +12,10 @@ def contactView(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject= 'korcma Kontakt'
+            subject= form.cleaned_data["email"]
             from_email = form.cleaned_data["email"]
             message = form.cleaned_data['message']
-            send_mail(subject='', message=message, from_email=from_email, recipient_list=["korcmaujakuba@gmail.com"])
+            send_mail(subject, message, from_email, ["korcmaujakuba@gmail.com"])
             return redirect("success")
     return render(request, "contact/contact.html", {"form": form})
 

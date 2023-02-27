@@ -2,14 +2,14 @@
 {% block title %}Napište nám{% endblock %}
 {% block content %}
 <div class="login-form">
-    <h3>Napište Nám</h3>
+    <h3>NAPIŠTE NÁM</h3>
 <form action="" method="post">
     {% csrf_token %}
     {% for field in form %}
     <div class="label">{{ field.label }}</div>
     <div class="field">{{ field }}</div>
     {% endfor %}
-    <button class="submit-button" type="submit" value="Register">Odoslať</button>
+    <button class="submit-button" type="submit" value="Register">ODOSLAŤ</button>
 </form>
 <a href="{% url 'home' %}">Home Page</a>
 </div>
